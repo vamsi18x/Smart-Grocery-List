@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PantryPal | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-bg">
+
+<div class="login-container">
+  <div class="login-left">
+    <h1>🥬 PantryPal</h1>
+    <p class="tagline">Smart grocery planning for Indian households.</p>
+    <ul class="features">
+      <li>✔ Predict weekly & monthly groceries</li>
+      <li>✔ Learn from your purchase history</li>
+      <li>✔ Never forget essentials again</li>
+    </ul>
+  </div>
+
+  <div class="login-right">
+    <div class="auth-slider" id="authSlider">
+      <div class="auth-form">
+        <h2>Sign In</h2>
+        <p class="hint">Welcome back 👋</p>
+        <input type="email" id="login-email" placeholder="Email address">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login-btn">Login</button>
+        <p class="switch-text">
+          Don’t have an account? <span onclick="showSignup()">Create one</span>
+        </p>
+      </div>
+
+      <div class="auth-form">
+        <h2>Create Account</h2>
+        <p class="hint">Takes less than a minute</p>
+        <input type="text" id="reg-username" placeholder="Full Name">
+        <input type="email" id="reg-email" placeholder="Email address">
+        <input type="password" id="reg-password" placeholder="Password">
+        <button id="register-btn">Sign Up</button>
+        <p class="switch-text">
+          Already registered? <span onclick="showLogin()">Back to login</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  const slider = document.getElementById("authSlider");
+  function showSignup() { slider.classList.add("move"); }
+  function showLogin() { slider.classList.remove("move"); }
+</script>
+</body>
+</html>

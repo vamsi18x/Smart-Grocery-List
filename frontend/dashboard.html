@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PantryPal | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-bg">
+
+<div class="navbar">
+  <div class="nav-container">
+    <div class="logo">🥬 <span>Pantry</span>Pal</div>
+    <div class="nav-right">
+      <div class="user-profile">
+        <div class="avatar" id="user-avatar">U</div>
+        <span id="username">User</span>
+      </div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+</div>
+
+<div class="dashboard-container">
+  <div class="header-section">
+    <h1 class="dashboard-title">Smart Grocery Dashboard</h1>
+    <p class="dashboard-subtitle">Manage your grocery planning intelligently</p>
+  </div>
+
+  <div class="dashboard-cards">
+    <div class="dashboard-card" onclick="viewHistory()">
+      <div class="card-icon">📜</div>
+      <div class="card-info">
+        <h3>Purchase History</h3>
+        <p>View your past grocery purchases</p>
+      </div>
+    </div>
+
+    <div class="dashboard-card" onclick="prepareList('week')">
+      <div class="card-icon">📅</div>
+      <div class="card-info">
+        <h3>Weekly Prediction</h3>
+        <p>Next 7 days essentials</p>
+      </div>
+    </div>
+
+    <div class="dashboard-card" onclick="prepareList('month')">
+      <div class="card-icon">🗓️</div>
+      <div class="card-info">
+        <h3>Monthly Prediction</h3>
+        <p>Stock up for the month</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="content" class="dashboard-content">
+    <div class="empty-state">
+      <p class="placeholder">Select an option above to view details</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
